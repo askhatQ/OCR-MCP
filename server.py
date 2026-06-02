@@ -281,7 +281,10 @@ async def ocr_from_url(params: OCRFromURLInput) -> str:
 
     mcp.run(transport="streamable_http")
 
+
+app = mcp.sse_app()
+
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run(mcp.sse_app(), host="0.0.0.0", port=port)
+    port = int(os.environ.get('PORT', 8000))
+    uvicorn.run(app, host='0.0.0.0', port=port, http='h11')
