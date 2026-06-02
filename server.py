@@ -279,4 +279,4 @@ async def ocr_from_url(params: OCRFromURLInput) -> str:
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable_http", port=int(os.environ.get("PORT", 8000)))
+    mcp.run(transport="streamable_http")
