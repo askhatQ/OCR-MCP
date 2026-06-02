@@ -1,5 +1,3 @@
-@"
 mcp
 httpx
 pydantic
-"@ | Out-File -FilePath requirements.txt -Encoding utf8
