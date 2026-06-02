@@ -1,0 +1,8 @@
+@"
+services:
+  - type: web
+    name: ocr-mcp
+    runtime: python
+    buildCommand: pip install mcp httpx pydantic
+    startCommand: python server.py
+"@ | Out-File -FilePath render.yaml -Encoding ascii
